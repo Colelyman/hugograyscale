@@ -1,8 +1,9 @@
 {{- define "main" -}}
     {{- $.Scratch.Add "about" "about" -}}
-    {{- $.Scratch.Add "download" "download" -}}
+    {{- $.Scratch.Add "music" "music" -}}
+    {{- $.Scratch.Add "videos" "videos" -}}
     {{- $.Scratch.Add "contact" "contact" -}}
-    {{- range $pagesect := (slice "about" "download" "contact") -}}
+    {{- range $pagesect := (slice "about" "music" "videos" "contact") -}}
         {{- if isset $.Params $pagesect -}}
           {{- $param_pagesect := index $.Params $pagesect -}}
           {{- if isset $param_pagesect "rename" -}}
@@ -20,7 +21,7 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarResponsive">
           <ul class="navbar-nav ml-auto">
-            {{- range $pagesect := ( slice "about" "download" "contact" ) -}}
+            {{- range $pagesect := ( slice "about" "music" "contact" ) -}}
               {{- if isset $.Params $pagesect -}}
                 <li class="nav-item">
                   <a class="nav-link js-scroll-trigger improve-contrast-box" href="#{{ $.Scratch.Get $pagesect }}">{{- $.Scratch.Get $pagesect -}}</a>
@@ -38,7 +39,7 @@
         </div>
       </div>
     </nav>
-    
+
     <!-- Intro Header -->
     {{- if isset $.Params "intro" -}}
     <header class="masthead">
@@ -74,14 +75,28 @@
     </section>
     {{- end -}}
 
-    <!-- Download Section -->
-    {{- if isset $.Params "download" -}}
-    <section id="{{ .Scratch.Get "download" }}" class="download-section content-section text-center">
+    <!-- Music Section -->
+    {{- if isset $.Params "music" -}}
+    <section id="{{ .Scratch.Get "music" }}" class="download-section content-section text-center">
       <div class="container">
         <div class="col-lg-8 mx-auto">
             <div class="improve-contrast-box">
-              <h2>{{- default "" $.Params.download.header | safeHTML -}}</h2>
-              <p>{{- default "" $.Params.download.text | safeHTML -}}</p>
+              <h2>{{- default "" $.Params.music.header | safeHTML -}}</h2>
+              <p>{{- default "" $.Params.music.text | safeHTML -}}</p>
+            </div>
+        </div>
+      </div>
+    </section>
+    {{- end -}}
+
+    <!-- Video Section -->
+    {{- if isset $.Params "videos" -}}
+    <section id="{{ .Scratch.Get "videos" }}" class="download-section content-section text-center">
+      <div class="container">
+        <div class="col-lg-8 mx-auto">
+            <div class="improve-contrast-box">
+              <h2>{{- default "" $.Params.videos.header | safeHTML -}}</h2>
+              <p>{{- default "" $.Params.videos.text | safeHTML -}}</p>
             </div>
         </div>
       </div>
@@ -132,7 +147,7 @@
 
     {{- if isset $.Params "mapsapikey" -}}
     <!-- Map Section -->
-    <div id="map"></div> 
+    <div id="map"></div>
     {{- end -}}
 
 {{- end -}}
