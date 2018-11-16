@@ -21,7 +21,7 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarResponsive">
           <ul class="navbar-nav ml-auto">
-            {{- range $pagesect := ( slice "about" "music" "contact" ) -}}
+            {{- range $pagesect := ( slice "about" "music" "videos" "contact" ) -}}
               {{- if isset $.Params $pagesect -}}
                 <li class="nav-item">
                   <a class="nav-link js-scroll-trigger improve-contrast-box" href="#{{ $.Scratch.Get $pagesect }}">{{- $.Scratch.Get $pagesect -}}</a>
@@ -77,13 +77,11 @@
 
     <!-- Music Section -->
     {{- if isset $.Params "music" -}}
-    <section id="{{ .Scratch.Get "music" }}" class="download-section content-section text-center">
+    <section id="{{ .Scratch.Get "music" }}" class="content-section text-center">
       <div class="container">
         <div class="col-lg-8 mx-auto">
-            <div class="improve-contrast-box">
-              <h2>{{- default "" $.Params.music.header | safeHTML -}}</h2>
-              <p>{{- default "" $.Params.music.text | safeHTML -}}</p>
-            </div>
+            <h2>{{- default "" $.Params.music.header | safeHTML -}}</h2>
+            <p>{{- default "" $.Params.music.text | safeHTML -}}</p>
         </div>
       </div>
     </section>
@@ -91,13 +89,11 @@
 
     <!-- Video Section -->
     {{- if isset $.Params "videos" -}}
-    <section id="{{ .Scratch.Get "videos" }}" class="download-section content-section text-center">
+    <section id="{{ .Scratch.Get "videos" }}" class="content-section text-center">
       <div class="container">
         <div class="col-lg-8 mx-auto">
-            <div class="improve-contrast-box">
-              <h2>{{- default "" $.Params.videos.header | safeHTML -}}</h2>
-              <p>{{- default "" $.Params.videos.text | safeHTML -}}</p>
-            </div>
+            <h2>{{- default "" $.Params.videos.header | safeHTML -}}</h2>
+            <p>{{- default "" $.Params.videos.text | safeHTML -}}</p>
         </div>
       </div>
     </section>
@@ -134,6 +130,13 @@
                 <a href="https://plus.google.com/+{{ $.Params.socialhandles.googplus }}/posts" class="btn btn-default btn-lg">
                   <i class="fa fa-google-plus fa-fw"></i>
                   <span class="network-name">Google+</span>
+                </a>
+              </li>
+              {{- end -}}
+              {{- if isset $.Params.socialhandles "email" -}}
+              <li class="list-inline-item">
+                <a href="mailto:{{ $.Params.socialhandles.email}}" class="btn btn-default btn-lg">
+                  {{ $.Params.socialhandles.email }}
                 </a>
               </li>
               {{- end -}}
