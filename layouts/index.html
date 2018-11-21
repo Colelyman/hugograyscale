@@ -1,9 +1,9 @@
 {{- define "main" -}}
     {{- $.Scratch.Add "about" "about" -}}
-    {{- $.Scratch.Add "music" "music" -}}
-    {{- $.Scratch.Add "videos" "videos" -}}
+    {{- $.Scratch.Add "listen" "listen" -}}
+    {{- $.Scratch.Add "watch" "watch" -}}
     {{- $.Scratch.Add "contact" "contact" -}}
-    {{- range $pagesect := (slice "about" "music" "videos" "contact") -}}
+    {{- range $pagesect := (slice "about" "listen" "watch" "contact") -}}
         {{- if isset $.Params $pagesect -}}
           {{- $param_pagesect := index $.Params $pagesect -}}
           {{- if isset $param_pagesect "rename" -}}
@@ -21,7 +21,7 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarResponsive">
           <ul class="navbar-nav ml-auto">
-            {{- range $pagesect := ( slice "about" "music" "videos" "contact" ) -}}
+            {{- range $pagesect := ( slice "about" "listen" "watch" "contact" ) -}}
               {{- if isset $.Params $pagesect -}}
                 <li class="nav-item">
                   <a class="nav-link js-scroll-trigger improve-contrast-box" href="#{{ $.Scratch.Get $pagesect }}">{{- $.Scratch.Get $pagesect -}}</a>
@@ -75,25 +75,25 @@
     </section>
     {{- end -}}
 
-    <!-- Music Section -->
-    {{- if isset $.Params "music" -}}
-    <section id="{{ .Scratch.Get "music" }}" class="content-section text-center">
+    <!-- Listen Section -->
+    {{- if isset $.Params "listen" -}}
+    <section id="{{ .Scratch.Get "listen" }}" class="content-section text-center">
       <div class="container">
         <div class="col-lg-8 mx-auto">
-            <h2>{{- default "" $.Params.music.header | safeHTML -}}</h2>
-            <p>{{- default "" $.Params.music.text | safeHTML -}}</p>
+            <h2>{{- default "" $.Params.listen.header | safeHTML -}}</h2>
+            <p>{{- default "" $.Params.listen.text | safeHTML -}}</p>
         </div>
       </div>
     </section>
     {{- end -}}
 
     <!-- Video Section -->
-    {{- if isset $.Params "videos" -}}
-    <section id="{{ .Scratch.Get "videos" }}" class="content-section text-center">
+    {{- if isset $.Params "watch" -}}
+    <section id="{{ .Scratch.Get "watch" }}" class="content-section text-center">
       <div class="container">
         <div class="col-lg-8 mx-auto">
-            <h2>{{- default "" $.Params.videos.header | safeHTML -}}</h2>
-            <p>{{- default "" $.Params.videos.text | safeHTML -}}</p>
+            <h2>{{- default "" $.Params.watch.header | safeHTML -}}</h2>
+            <p>{{- default "" $.Params.watch.text | safeHTML -}}</p>
         </div>
       </div>
     </section>
