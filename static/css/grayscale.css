@@ -43,7 +43,7 @@ a {
   -webkit-transition: all 0.2s ease-in-out;
   -moz-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
-  color: #42DCA3;
+  color: #0050ff;
 }
 
 a:focus, a:hover {
@@ -152,8 +152,12 @@ a:focus, a:hover {
 }
 
 .shadow {
-  border-radius: 5px;
   text-shadow: 0px 0px 8px rgba(0, 0, 0, 1);
+}
+
+.intro {
+  border: 2px solid;
+  border-radius: 5px;
 }
 
 @media (min-width: 768px) {
@@ -231,16 +235,16 @@ a:focus, a:hover {
 }
 
 .btn-default {
-  color: #42DCA3;
-  border: 1px solid #42DCA3;
+  color: #0050ff;
+  border: 1px solid #0050ff;
   background-color: transparent;
 }
 
 .btn-default:focus, .btn-default:hover {
   color: black;
-  border: 1px solid #42DCA3;
+  border: 1px solid #0050ff;
   outline: none;
-  background-color: #42DCA3;
+  background-color: #0050ff;
 }
 
 ul.banner-social-buttons {
