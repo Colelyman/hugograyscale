@@ -47,7 +47,7 @@
         <div class="container">
           <div class="row">
             <div class="col-lg-8 mx-auto">
-              <div class="shadow">
+              <div class="shadow intro">
                 <h1 class="brand-heading">{{ default "" $.Params.intro.header | safeHTML }}</h1>
                 <h3 class="intro-text">{{- default "" $.Params.intro.text | safeHTML -}}</h3>
               </div>
@@ -77,14 +77,9 @@
 
     <!-- Listen Section -->
     {{- if isset $.Params "listen" -}}
-    <section id="{{ .Scratch.Get "listen" }}" class="content-section text-center">
-      <div class="container">
-        <div class="col-lg-8 mx-auto">
-            <h2>{{- default "" $.Params.listen.header | safeHTML -}}</h2>
-            <p>{{- default "" $.Params.listen.text | safeHTML -}}</p>
-        </div>
-      </div>
-    </section>
+
+      {{ partial "soundcloud.html" . }}
+
     {{- end -}}
 
     <!-- Video Section -->
