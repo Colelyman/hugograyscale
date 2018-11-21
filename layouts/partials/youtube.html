@@ -1,0 +1,24 @@
+<section id="{{ .Scratch.Get "watch" }}" class="content-section text-center">
+    <div class="container">
+    <div class="row">
+        <div class="col-lg-8 mx-auto">
+            <h2>{{- default "" .Params.watch.header | safeHTML -}}</h2>
+            {{- range $i, $link := .Params.watch.links -}}
+                {{- if (modBool $i 2) -}} {{/* Open row if even */}}
+                    <div class="row">
+                {{- end -}}
+                        <div class="col">
+                            <iframe width="100%" height="315" src="{{- $link -}}"
+                                    frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+                {{- if not (modBool $i 2) -}} {{/* Close row if odd */}}
+                    </div>
+                {{- end -}}
+            {{- end -}}
+            {{- if not (modBool (len .Params.listen.links) 2) -}}
+                </div>
+            {{- end -}}
+        </div>
+    </div>
+    </div>
+</section>
