@@ -7,9 +7,9 @@
                 {{- if (modBool $i 2) -}} {{/* Open row if even */}}
                     <div class="row">
                 {{- end -}}
+                        <script type="text/javascript">getSoundCloudEmbed({{- $link -}}, {{- $i -}})</script>
                         <div class="col">
-                            <iframe width="100%" height="450" scrolling="no" frameborder="no" allow="autoplay"
-                                    src="https://w.soundcloud.com/player/?url={{- $link -}}&color=%230050ff&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe>
+                            <div id="soundcloud-{{- $i -}}">
                         </div>
                 {{- if not (modBool $i 2) -}} {{/* Close row if odd */}}
                     </div>
