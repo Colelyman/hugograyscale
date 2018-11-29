@@ -7,7 +7,9 @@
                 {{- if (modBool $i 2) -}} {{/* Open row if even */}}
                     <div class="row">
                 {{- end -}}
-                        <script type="text/javascript">$(window).load(getSoundCloudEmbed({{- $link -}}, {{- $i -}}))</script>
+                        <script type="text/javascript">
+                            document.addEventListener('DOMContentLoaded', getSoundCloudEmbed({{- $link -}}, {{- $i -}}), false)
+                        </script>
                         <div class="col">
                             <div id="soundcloud-{{- $i -}}"></div>
                         </div>
