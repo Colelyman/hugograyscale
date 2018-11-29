@@ -6,7 +6,9 @@ function getSoundCloudEmbed(url, id) {
         data: {
             format: 'json',
             url: url,
-            iframe: 'true'
+            iframe: 'true',
+            height: '450',
+            color: '0050ff'
         },
         async: false
     }).responseText
