@@ -197,6 +197,7 @@ a:focus, a:hover {
 .content-section {
   padding-top: 150px;
   padding-bottom: 150px;
+  border-bottom: 2px solid white;
 }
 
 .download-section {
