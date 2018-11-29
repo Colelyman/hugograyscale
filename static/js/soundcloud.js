@@ -1,4 +1,4 @@
-var getSoundCloudEmbed = function (url, id) {
+var getSoundCloudEmbed(url, id) {
     var res = $.ajax({
         type: 'GET',
         dataType: 'json',
