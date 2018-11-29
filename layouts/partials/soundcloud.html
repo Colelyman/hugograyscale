@@ -8,7 +8,9 @@
                     <div class="row">
                 {{- end -}}
                         <script type="text/javascript">
-                            document.addEventListener('DOMContentLoaded', getSoundCloudEmbed({{- $link -}}, {{- $i -}}), false)
+                            document.addEventListener('DOMContentLoaded', function() {
+                                getSoundCloudEmbed({{- $link -}}, {{- $i -}})
+                            }, false)
                         </script>
                         <div class="col">
                             <div id="soundcloud-{{- $i -}}"></div>

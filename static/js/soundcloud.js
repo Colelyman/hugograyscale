@@ -12,5 +12,5 @@ function getSoundCloudEmbed(url, id) {
     }).responseText
     console.log(res)
     var data = $.parseJSON(res)
-    $('#soundcloud-' + id).innerHTML(data.html)
+    $('#soundcloud-' + id).html(data.html)
 }
