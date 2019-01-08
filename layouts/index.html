@@ -3,7 +3,7 @@
     {{- $.Scratch.Add "listen" "listen" -}}
     {{- $.Scratch.Add "watch" "watch" -}}
     {{- $.Scratch.Add "contact" "contact" -}}
-    {{- range $pagesect := (slice "about" "listen" "watch" "contact") -}}
+    {{- range $pagesect := (slice "about" "listen" "works" "contact") -}}
         {{- if isset $.Params $pagesect -}}
           {{- $param_pagesect := index $.Params $pagesect -}}
           {{- if isset $param_pagesect "rename" -}}
@@ -21,7 +21,7 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarResponsive">
           <ul class="navbar-nav ml-auto">
-            {{- range $pagesect := ( slice "about" "listen" "watch" "contact" ) -}}
+            {{- range $pagesect := ( slice "about" "listen" "works" "contact" ) -}}
               {{- if isset $.Params $pagesect -}}
                 <li class="nav-item">
                   <a class="nav-link js-scroll-trigger improve-contrast-box" href="#{{ $.Scratch.Get $pagesect }}">{{- $.Scratch.Get $pagesect -}}</a>
