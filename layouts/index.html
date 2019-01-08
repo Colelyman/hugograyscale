@@ -66,8 +66,11 @@
     <section id="{{ .Scratch.Get "about" }}" class="content-section text-center">
       <div class="container">
         <div class="row">
+          <h2>{{- default "" $.Params.about.header | safeHTML -}}</h2>
+          <div class="col-4 mx-auto">
+            <img src="{{- default "/img/me.jpg" $.Params.about.photo | safeHTML -}}" alt="Photograph of Zach Sundwall">
+          </div>
           <div class="col-lg-8 mx-auto">
-            <h2>{{- default "" $.Params.about.header | safeHTML -}}</h2>
             <p>{{- default "" $.Params.about.text | safeHTML -}}</p>
           </div>
         </div>
