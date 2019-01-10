@@ -8,7 +8,8 @@ function getSoundCloudEmbed(url, id) {
             url: url,
             iframe: 'true',
             height: '450',
-            color: '0050ff'
+            color: '0050ff',
+            show_artwork: 'false'
         },
         async: false
     }).responseText
