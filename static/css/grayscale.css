@@ -138,6 +138,11 @@ a:focus, a:hover {
   background-size: cover;
 }
 
+.listen {
+  background: url("../img/listen-bg.jpg") no-repeat bottom center scroll;
+  padding: 0 0;
+}
+
 .masthead .intro-body {
   display: table-cell;
   vertical-align: middle;
