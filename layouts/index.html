@@ -68,14 +68,10 @@
         <div class="row">
           <div class="col-lg-8 mx-auto">
             <h2>{{- default "" $.Params.about.header | safeHTML -}}</h2>
-            <div class="row">
-              <div class="col-md-4 col-sm-12">
-                <img src="{{- default "/img/me.jpg" $.Params.about.photo | safeHTML -}}" alt="Photograph of Zach Sundwall" style="max-width: 100%;">
-              </div>
-              <div class="col-md-8 col-sm-12">
-                <p style="text-align: left;" >{{- default "" $.Params.about.text | safeHTML -}}</p>
-              </div>
-            </div>
+              <p style="text-align: left;" >
+                <img src="{{- default "/img/me.jpg" $.Params.about.photo | safeHTML -}}" alt="Photograph of Zach Sundwall" style="max-width: 100%;" align="top" />
+                {{- default "" $.Params.about.text | safeHTML -}}
+              </p>
           </div>
         </div>
       </div>
