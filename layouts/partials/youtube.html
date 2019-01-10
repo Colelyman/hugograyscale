@@ -1,9 +1,9 @@
-<section id="{{ .Scratch.Get "watch" }}" class="content-section text-center">
+<section id="{{ .Scratch.Get "works" }}" class="content-section text-center">
     <div class="container">
     <div class="row">
         <div class="col-lg-8 mx-auto">
-            <h2>{{- default "" .Params.watch.header | safeHTML -}}</h2>
-            {{- range $i, $link := .Params.watch.links -}}
+            <h2>{{- default "" .Params.works.header | safeHTML -}}</h2>
+            {{- range $i, $link := .Params.works.links -}}
                 {{- if (modBool $i 2) -}} {{/* Open row if even */}}
                     <div class="row">
                 {{- end -}}
