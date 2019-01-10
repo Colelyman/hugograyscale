@@ -141,6 +141,8 @@ a:focus, a:hover {
 .listen {
   background: url("../img/listen-bg.jpg") no-repeat bottom center scroll;
   padding: 0 0;
+  width: 100%;
+  background-size: cover;
 }
 
 .soundcloud {
