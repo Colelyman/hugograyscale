@@ -13,7 +13,7 @@ function getSoundCloudEmbed(url, id) {
         async: false
     }).responseText
     console.log(res)
-    res = res.replace('show_artwork=true', 'show_artwork=false')
+    res = res.replace('visual=true', 'visual=false')
     var data = $.parseJSON(res)
     $('#soundcloud-' + id).html(data.html)
 }
