@@ -143,6 +143,10 @@ a:focus, a:hover {
   padding: 0 0;
 }
 
+.soundcloud {
+  padding-bottom: 30px;
+}
+
 .masthead .intro-body {
   display: table-cell;
   vertical-align: middle;
