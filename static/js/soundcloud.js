@@ -15,6 +15,6 @@ function getSoundCloudEmbed(url, id) {
     console.log(res)
     res = res.replace('visual=true', 'visual=false') // this is to disable the large album art
     var data = $.parseJSON(res)
-    $('#soundcloud-title' + id).html(data.title.replace(' by Zach Sundwall', ''))
+    $('#soundcloud-title-' + id).html(data.title.replace(' by Zach Sundwall', ''))
     $('#soundcloud-' + id).html(data.html)
 }
