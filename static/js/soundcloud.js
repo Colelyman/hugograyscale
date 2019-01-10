@@ -8,12 +8,12 @@ function getSoundCloudEmbed(url, id) {
             url: url,
             iframe: 'true',
             height: '450',
-            color: '0050ff',
-            show_artwork: 'false'
+            color: '0050ff'
         },
         async: false
     }).responseText
     console.log(res)
+    res = res.replace('show_artwork=true', 'show_artwork=false')
     var data = $.parseJSON(res)
     $('#soundcloud-' + id).html(data.html)
 }
