@@ -1,7 +1,7 @@
 {{- define "main" -}}
     {{- $.Scratch.Add "about" "about" -}}
     {{- $.Scratch.Add "listen" "listen" -}}
-    {{- $.Scratch.Add "watch" "watch" -}}
+    {{- $.Scratch.Add "works" "works" -}}
     {{- $.Scratch.Add "contact" "contact" -}}
     {{- range $pagesect := (slice "about" "listen" "works" "contact") -}}
         {{- if isset $.Params $pagesect -}}
@@ -90,7 +90,7 @@
     {{- end -}}
 
     <!-- Video Section -->
-    {{- if isset $.Params "watch" -}}
+    {{- if isset $.Params "works" -}}
 
       {{ partial "youtube.html" . }}
 
