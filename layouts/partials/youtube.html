@@ -3,7 +3,7 @@
     <div class="row">
         <div class="col-lg-8 mx-auto">
             <h2>{{- default "" .Params.work.header | safeHTML -}}</h2>
-            {{- range $i, $link := .Params.works.links -}}
+            {{- range $i, $link := .Params.work.links -}}
                 {{- if (modBool $i 2) -}} {{/* Open row if even */}}
                     <div class="row">
                 {{- end -}}
@@ -15,7 +15,7 @@
                     </div>
                 {{- end -}}
             {{- end -}}
-            {{- if not (modBool (len .Params.listen.links) 2) -}}
+            {{- if not (modBool (len .Params.work.links) 2) -}}
                 </div>
             {{- end -}}
         </div>
