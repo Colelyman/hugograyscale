@@ -1,9 +1,9 @@
 {{- define "main" -}}
     {{- $.Scratch.Add "about" "about" -}}
     {{- $.Scratch.Add "listen" "listen" -}}
-    {{- $.Scratch.Add "works" "works" -}}
+    {{- $.Scratch.Add "work" "work" -}}
     {{- $.Scratch.Add "contact" "contact" -}}
-    {{- range $pagesect := (slice "about" "listen" "works" "contact") -}}
+    {{- range $pagesect := (slice "about" "listen" "work" "contact") -}}
         {{- if isset $.Params $pagesect -}}
           {{- $param_pagesect := index $.Params $pagesect -}}
           {{- if isset $param_pagesect "rename" -}}
@@ -21,7 +21,7 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarResponsive">
           <ul class="navbar-nav ml-auto">
-            {{- range $pagesect := ( slice "about" "listen" "works" "contact" ) -}}
+            {{- range $pagesect := ( slice "about" "listen" "work" "contact" ) -}}
               {{- if isset $.Params $pagesect -}}
                 <li class="nav-item">
                   <a class="nav-link js-scroll-trigger improve-contrast-box" href="#{{ $.Scratch.Get $pagesect }}">{{- $.Scratch.Get $pagesect -}}</a>
@@ -86,7 +86,7 @@
     {{- end -}}
 
     <!-- Video Section -->
-    {{- if isset $.Params "works" -}}
+    {{- if isset $.Params "work" -}}
 
       {{ partial "youtube.html" . }}
 
