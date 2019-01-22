@@ -5,9 +5,9 @@
 # * an about section presenting a header and text with black background
 # * a download section presenting header and text with background image
 # * a contact section presenting header and text with black background
-# 
+#
 # The section names show up as the links in the navbar, so you may wish to rename them if, for example, you're not using it for the purpose suggested by the default section name.
-# 
+#
 # The background images are selected by filename - the intro section image must be named "intro-bg.jpg" and placed in the "static/img/" directory for your site.  Similarly, the downloads section image must be named "downloads-bg.jpg" and placed in the "static/img/" directory for your site.  See the default images in the theme's static directory for file size reference.
 
 title: "Hugo Grayscale Theme"
@@ -32,6 +32,11 @@ intro:
 about:
     header: "About Grayscale"
     text: '<p>Grayscale is a free Hugo theme, originally created for Bootstrap by Start Bootstrap. It can be yours right now, simply download the template from <a href="https://github.com/runningstream/hugograyscale/">the Github page</a>. The theme is open source, and you can use it for any purpose, personal or commercial.</p> <p>This theme was also adapted from a Jekyll version, brought to you by <a href="https://github.com/jeromelachaud">Jerome Lachaud</a></p> <p>This theme features stock photos by <a href="http://gratisography.com/">Gratisography</a> along with a custom Google Maps skin courtesy of <a href="http://snazzymaps.com/">Snazzy Maps</a>.</p> <p>Grayscale includes full HTML, CSS, and custom JavaScript files along with SASS and LESS files for easy customization!</p>'
+
+listen:
+    links:
+        - 'https://soundcloud.com/zsundwall/closer'
+        - 'https://soundcloud.com/zsundwall/illuminate'
 
 download:
     rename: "Links"
