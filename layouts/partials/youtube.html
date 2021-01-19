@@ -1,6 +1,6 @@
 <section id="{{ .Scratch.Get "work" }}" class="content-section text-center">
     <div class="container">
-    <div class="row">
+    <div class="row justify-content-center">
         <div class="col-lg-8 mx-auto">
             <h2>{{- default "" .Params.work.header | safeHTML -}}</h2>
             {{- range $i, $link := .Params.work.links -}}

@@ -1,6 +1,6 @@
 <section id="{{ .Scratch.Get "listen" }}" class="content-section text-center listen">
     <div class="container">
-    <div class="row">
+    <div class="row justify-content-center">
         <div class="col-lg-8 mx-auto">
             <h2>{{- default "" .Params.listen.header | safeHTML -}}</h2>
             {{- range $i, $link := .Params.listen.links -}}
