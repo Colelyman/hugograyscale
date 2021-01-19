@@ -1,11 +1,11 @@
 <section id="{{ .Scratch.Get "listen" }}" class="content-section text-center listen">
     <div class="container">
-    <div class="row justify-content-center">
+    <div class="row">
         <div class="col-lg-8 mx-auto">
             <h2>{{- default "" .Params.listen.header | safeHTML -}}</h2>
             {{- range $i, $link := .Params.listen.links -}}
                 {{- if (modBool $i 2) -}} {{/* Open row if even */}}
-                    <div class="row">
+                    <div class="row justify-content-center">
                 {{- end -}}
                         <script type="text/javascript">
                             document.addEventListener('DOMContentLoaded', function() {

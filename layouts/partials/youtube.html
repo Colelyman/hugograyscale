@@ -1,11 +1,11 @@
 <section id="{{ .Scratch.Get "work" }}" class="content-section text-center">
     <div class="container">
-    <div class="row justify-content-center">
+    <div class="row">
         <div class="col-lg-8 mx-auto">
             <h2>{{- default "" .Params.work.header | safeHTML -}}</h2>
             {{- range $i, $link := .Params.work.links -}}
                 {{- if (modBool $i 2) -}} {{/* Open row if even */}}
-                    <div class="row">
+                    <div class="row justify-content-center">
                 {{- end -}}
                         <div class="col-md-6 col-sm-12">
                             <iframe width="100%" height="315" src="{{- $link -}}"
