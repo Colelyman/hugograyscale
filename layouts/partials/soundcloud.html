@@ -3,7 +3,7 @@
     <div class="row">
         <div class="col-lg-8 mx-auto">
             <h2>{{- default "" .Params.listen.header | safeHTML -}}</h2>
-            {{- range $i, $link := .Params.listen.links -}}
+            {{- range $i, $link := .Params.listen.soundcloud -}}
                 {{- if (modBool $i 2) -}} {{/* Open row if even */}}
                     <div class="row justify-content-center">
                 {{- end -}}
@@ -20,7 +20,25 @@
                     </div>
                 {{- end -}}
             {{- end -}}
-            {{- if not (modBool (len .Params.listen.links) 2) -}}
+            {{- if not (modBool (len .Params.listen.soundcloud) 2) -}}
+                </div>
+            {{- end -}}
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-8 mx-auto">
+            {{- range $i, $link := .Params.listen.spotify -}}
+                {{- if (modBool $i 2) -}} {{/* Open row if even */}}
+                    <div class="row justify-content-center">
+                {{- end -}}
+                        <div class="col-md-6 col-sm-12">
+                            <iframe src="{{- $link -}}" width="100%" height="450" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+                        </div>
+                {{- if not (modBool $i 2) -}} {{/* Close row if odd */}}
+                    </div>
+                {{- end -}}
+            {{- end -}}
+            {{- if not (modBool (len .Params.listen.spotify) 2) -}}
                 </div>
             {{- end -}}
         </div>
